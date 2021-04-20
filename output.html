@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*
+    #f45a3b,светло-красный
+    #000000, черный
+    #d8d8d8, светло-серый
+    #ff0000, красный
+    #999999,серый
+    #666666, темно-серый
+    #222222,
+    #ffffff
+    */
+    
+    .canvas {
+        width: 1000px;
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        position: relative;
+        
+    }    
+    
+    .flagpole {
+        position: absolute;
+        left: -147.5px;        
+        background-color: transparent;
+        position: relative;
+        width: 95px;
+        height: 415px;                    
+    }
+
+    .flagpole__flag-with-stick {
+        position: absolute;
+        top: 0;
+        height: 320px;
+    }
+
+    .flagpole__flag {
+        clip-path: polygon(100% 0, 0 50%, 100% 100%);
+        width: 65px;
+        height: 40px;
+        background-color: #ff0000;
+        left: 0;
+        top: 5px;
+    }
+
+    .flagpole__stick {
+        height: 320px;
+        width: 5px;
+        background-color: #999999;
+        top: 0;
+        right: 0;
+        position: absolute;    
+    }
+
+    .flagpole__flag-base-background {
+        position: absolute;
+        top: 320px;
+        width: 55px;
+        height: 40px;
+        background-color: #000000;
+        right: -35px;
+        border-radius: 5px;
+        position: relative;   
+    }
+
+    .flagpole__flag-base-gray-top {
+        background-color: #666666;
+        position: absolute;
+        top: 10px;
+        width: 100%;        
+        height: 30px;
+    }
+
+    .flagpole__trapezoid {
+        clip-path: polygon(21.05% 0%, 100% 0, 100% 100%, 0% 100%);
+        background-color: #000000;
+        width: 95px;
+        height: 55px;
+        position: relative;
+        top: 320px;
+    }
+    
+    .truck {
+       width: 535px;
+       height: 365px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .truck__cargo {
+        height: 50px;
+        width: 520px;
+        display: flex;
+    }
+
+    .truck__cargo_left {
+        background-color: #d8d8d8;
+        border-radius: 15% 85% 0% 100% / 100% 0% 100% 0%;
+        height: 100%;
+        width: 50%;       
+    }
+    .truck__cargo_right {
+        background-color: #d8d8d8;
+        border-radius: 0% 100% 0% 100% / 100% 92% 8% 0% ;
+        height: 100%;
+        width: 50%; 
+    }
+
+    .truck__border {
+        background-color: #ff0000;
+        border-radius: 15px;
+        width: 100%;
+        height: 15px;
+    }
+
+    .truck__side {
+        background-color: #f45a3b;
+        border-radius: 0 0 25px 25px;
+        width: 520px;
+        height: 130px;
+    }
+
+    .truck__base{
+        background-color: #222222;
+        width: 490px;
+        height: 110px;
+        clip-path: polygon(2% 0, 98% 0, 100% 9%, 100% 36%, 86% 100%, 14% 100%, 0 36%, 0 9%);
+
+    }
+
+    .truck__axel {
+        width: 480px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .truck__wheel {
+        background-color: #000000;
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        margin-top: -70px;
+        z-index: 2;
+    }
+
+</style>
+<body>
+    <div class="canvas">
+        <div class="flagpole">
+            <div class="flagpole__flag-with-stick">
+                <div class="flagpole__flag"></div>
+                <div class="flagpole__stick"></div>
+            </div>
+            <div class="flagpole__flag-base-background">
+                <div class="flagpole__flag-base-gray-top"></div>
+            </div>
+            <div class="flagpole__trapezoid"></div>
+        </div>
+        <div class="truck">
+            <div class="truck__cargo">
+                <div class="truck__cargo_left"></div>                
+                <div class="truck__cargo_right"></div>                
+            </div>
+            <div class="truck__border"></div>
+            <div class="truck__side"></div>
+            <div class="truck__base"></div>
+            <div class="truck__axel">
+                <div class="truck__wheel"></div>
+                <div class="truck__wheel"></div>
+                <div class="truck__wheel"></div>
+            </div>
+        </div>
+
+        
+                      
+    </div>    
+</body>
+</html>
+
